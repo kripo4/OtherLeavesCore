@@ -1,0 +1,54 @@
+# OtherLeavesCore Plugin Configuration
+# Форк Leaves/Paper для Minecraft 1.21.4
+
+name: OtherLeavesCore
+version: 1.21.4-b04ebcb
+description: OtherLeavesCore - форк Leaves/Paper с дополнительными возможностями
+author: OtherLeavesCore Team
+website: https://github.com/yourusername/OtherLeavesCore
+main: top.leavesmc.leaves.OtherLeavesCore
+
+# Совместимость с версиями Minecraft
+api-version: 1.21
+
+# Команды ядра
+commands:
+  olc:
+    description: Команда для управления OtherLeavesCore
+    usage: /olc [info|reload|help]
+    permission: otherleavescore.command
+    aliases: [otherleavescore, olcore]
+
+# Права доступа
+permissions:
+  otherleavescore.*:
+    description: Полные права доступа к OtherLeavesCore
+    children:
+      otherleavescore.command: true
+      otherleavescore.command.info: true
+      otherleavescore.command.reload: true
+      otherleavescore.admin: true
+    default: op
+    
+  otherleavescore.command:
+    description: Базовое использование команд OtherLeavesCore
+    default: true
+    
+  otherleavescore.command.info:
+    description: Просмотр информации о ядре
+    default: true
+    
+  otherleavescore.command.reload:
+    description: Перезагрузка конфигурации ядра
+    default: op
+    
+  otherleavescore.admin:
+    description: Административные права для OtherLeavesCore
+    default: op
+
+# Зависимости (опционально)
+softdepend: []
+loadbefore: []
+
+# Загрузка при старте сервера
+load: STARTUP
