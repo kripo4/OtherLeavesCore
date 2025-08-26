@@ -1,0 +1,64 @@
+# Конфигурация OtherLeavesCore
+# Форк Leaves/Paper для Minecraft 1.21.4
+
+# Основные настройки ядра
+server-name: "OtherLeavesCore"
+version: "1.21.4"
+
+# Настройки брендинга
+enable-custom-branding: true
+
+# Настройки команд
+enable-olc-command: true
+
+# Настройки производительности
+performance:
+  # Оптимизация обработки чанков
+  optimize-chunk-loading: true
+  
+  # Оптимизация обработки сущностей
+  optimize-entity-processing: true
+  
+  # Кэширование блоков
+  enable-block-caching: true
+
+# Настройки совместимости с плагинами
+plugin-compatibility:
+  # Режим совместимости с Paper плагинами
+  paper-compatibility-mode: true
+  
+  # Режим совместимости с Leaves плагинами  
+  leaves-compatibility-mode: true
+  
+  # Дополнительные хуки для плагинов
+  enable-plugin-hooks: true
+
+# Настройки логирования
+logging:
+  # Уровень логирования (INFO, WARNING, SEVERE, DEBUG)
+  level: "INFO"
+  
+  # Логирование отладочной информации
+  debug-mode: false
+  
+  # Логирование производительности
+  performance-logging: false
+
+# Дополнительные возможности
+features:
+  # Расширенная статистика сервера
+  extended-server-stats: true
+  
+  # Мониторинг производительности
+  performance-monitoring: true
+  
+  # Автоматическая оптимизация
+  auto-optimization: false
+
+# Настройки безопасности
+security:
+  # Проверка подлинности команд
+  command-verification: true
+  
+  # Ограничения на использование команд
+  command-rate-limiting: false
